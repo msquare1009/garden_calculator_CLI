@@ -1,6 +1,6 @@
 const {mulchCalculator, fromCubicsToLitres} = require('../src/utils/calculator');
 
-//test block for mulchCalculator function
+//Test block for mulchCalculator function
 describe('mulchCalculator', () => {
   test('calculates volume correctly for typical values', () => {
     expect(mulchCalculator(10, 5, 10)).toBe(5);
@@ -15,7 +15,7 @@ describe('mulchCalculator', () => {
   });
 });
 
-//test block for fromCubicsToLitres function
+//Test block for fromCubicsToLitres function
 describe('fromCubicsToLitres', () => {
   test('converts cubic meters to 50L bags', () => {
     expect(fromCubicsToLitres(1)).toBe(20);
