@@ -6,7 +6,7 @@ const { mulchCalculator, fromCubicsToLitres } = require('../utils/calculator');
 
 const mulchCommand = new Command('mulch');
 
-
+//Creates CLI arguments
 mulchCommand
   .description('Calculates mulch needed for a given area')
   .argument('<length>', 'length of your parcel in m')
@@ -14,10 +14,12 @@ mulchCommand
   .argument('<depth>', 'desired depth of mulch in cm')
   .option('-o, --output <file>', 'outputs the rusult in a file')
   .action((length, width, depth, options) => {
+    //Checks if input is numerical
     if (isNaN(length) || isNaN(width) || isNaN(depth)) {
       console.error('All arguments must be numbers');
       process.exit(1);
     }
+    //Checks if values are positive
     if (length <= 0 || width <= 0 || depth <= 0) {
       console.error('All values must be positive');
       process.exit(1);
@@ -29,7 +31,7 @@ mulchCommand
       ${cubic} cubic meters (m^3) of mulch for your area, 
       or equivalent of ${bags} bags of 50 liters`);
 
-    //Writes to output file
+    //Writes to the output file
     if (options.output) {
       fs.writeFile(
         options.output,
