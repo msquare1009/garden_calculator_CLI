@@ -3,7 +3,7 @@ const path = require('path');
 
 const cliPath = path.resolve(__dirname, '../bin/cli.js');
 
-//tests the CLI command execution 
+//Tests the CLI command execution 
 describe('CLI mulch calculator', () => {
   test('calculates mulch correctly', () => {
     const output = execSync(`node ${cliPath} mulch 10 5 10`).toString();
