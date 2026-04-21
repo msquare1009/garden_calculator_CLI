@@ -1,6 +1,7 @@
 # Garden Calculator CLI
 
-A simple and scalable Node.js CLI tool to calculate how much mulch your garden needs based on area and desired mulch depth.
+A simple and scalable Node.js CLI garden tool. 
+It calculates how much mulch your garden needs based on area and desired mulch depth.
 
 Provide your garden dimensions, and get the result in cubic meters and number of 50L bags.
 
